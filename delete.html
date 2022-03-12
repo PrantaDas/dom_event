@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete</title>
+</head>
+<body>
+    <h2>Delete Event</h2>
+    <section>
+        <h3 id="info">Important Information</h3>
+        <input id="confirm" type="text" placeholder="Type 'delete to confirm">
+        <button id="delete-button" disabled>Delete</button>
+    </section>
+
+
+
+
+    <script>
+        document.getElementById('delete-button').addEventListener('click',function(){
+            document.getElementById('info').style.display='none';
+        })
+
+
+        document.getElementById('confirm').addEventListener('focus',function(){
+            document.body.style.backgroundColor='red';
+        })
+        document.getElementById('confirm').addEventListener('blur',function(){
+            document.body.style.backgroundColor='white';
+        })
+        document.getElementById('confirm').addEventListener('keyup',function(event){
+            if(event.target.value=='delete'){
+                document.getElementById('delete-button').removeAttribute('disabled');
+            }
+            else{
+                document.getElementById('delete-button').setAttribute('disabled',true);
+            }
+
+        })
+    </script>
+</body>
+</html>
