@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+    <style>
+        section{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <input id="input-field" type="text">
+        <button onclick="showValue()" id="btn-search">Search</button>
+    </section>
+    <script>
+        let  input = document.getElementById("input-field");
+    input.addEventListener("keypress", function(event) {
+    if (event.keyCode === 13) {
+    event.preventDefault();
+    console.log(input.value);
+  }
+});
+
+    const showValue=()=>{
+       const inputValue= document.getElementById("input-field").value;
+       console.log(inputValue);
+    }
+     
+  
+    </script>
+</body>
+</html>
