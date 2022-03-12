@@ -24,8 +24,16 @@
     input.addEventListener("keypress", function(event) {
     if (event.keyCode === 13) {
     event.preventDefault();
+    document.getElementById('btn-search').click();
     console.log(input.value);
   }
+ /*  else{
+
+    const showValue=()=>{
+       const inputValue= document.getElementById("input-field").value;
+       console.log(inputValue);
+    }
+  } */
 });
 
     const showValue=()=>{
